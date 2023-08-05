@@ -1,0 +1,14 @@
+{
+  "contracts": {
+    "Vault": "0x20dd72Ed959b6147912C2e529F0a0C651c33c9ce",
+    "ProtocolFeesCollector": "0xC6920d3a369E7c8BD1A22DbE385e11d1F7aF948F",
+    "BalancerHelpers": "0x230a59F4d9ADc147480f03B0D3fFfeCd56c3289a",
+    "ProtocolFeePercentagesProvider": "0xe101551C4772F771FEDEBecc786931E61000657C",
+    "WeightedPoolFactory": "0xb841Df73861E65E6D61a80F503F095a91ce75e15",
+    "ComposableStablePoolFactory": "0x23F03a4fb344d8B98833d2ACe093cc305E03474f"
+  },
+  "networkParams": {
+    "id": 250,
+    "blockExplorerUrl": "ftmscan.com"
+  }
+}
