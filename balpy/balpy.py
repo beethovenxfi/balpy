@@ -1648,7 +1648,8 @@ class balpy(object):
 					self.deploymentAddresses["ProtocolFeePercentagesProvider"],
 					int(pauseWindowDurationSec),
 					int(bufferPeriodDurationSec),
-					decodedPoolData["owner"]];
+					decodedPoolData["owner"],
+					'{"name":"WeightedPool","version":4,"deployment":"20230320-weighted-pool-v4"}'];
 		elif poolType == "WeightedPool2Tokens":
 			args = [self.deploymentAddresses["Vault"],
 					decodedPoolData["name"],
@@ -1712,18 +1713,21 @@ class balpy(object):
 					decodedPoolData["swapEnabledOnStart"],
 					int(decodedPoolData["managementSwapFeePercentage"])];
 			structInConstructor = True;
-		elif poolType == "StablePhantomPool":
+		elif poolType == "ComposableStablePool":
 			args = [self.deploymentAddresses["Vault"],
+				self.deploymentAddresses["ProtocolFeePercentagesProvider"],
 				decodedPoolData["name"],
 				decodedPoolData["symbol"],
 				decodedPoolData["tokens"],
 				decodedPoolData["rateProviders"],
 				decodedPoolData["tokenRateCacheDurations"],
+				decodedPoolData["exemptFromYieldProtocolFeeFlag"],
 				int(decodedPoolData["amplificationParameter"]),
 				int(decodedPoolData["swapFeePercentage"]),
 				int(pauseWindowDurationSec),
 				int(bufferPeriodDurationSec),
-				decodedPoolData["owner"]];
+				decodedPoolData["owner"],
+				'{"name":"ComposableStablePool","version":5,"deployment":"20230711-composable-stable-pool-v5"}'];
 			structInConstructor = True;
 		elif poolType == "AaveLinearPool":
 			args = [self.deploymentAddresses["Vault"],
