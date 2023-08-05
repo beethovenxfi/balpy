@@ -1,8 +1,13 @@
+import sys
+import os
+path = os.getcwd()
+sys.path.append(path)
+
 import balpy
 
 def main():
-	network = "goerli"
-	poolId = "0xe867ad0a48e8f815dc0cda2cdb275e0f163a480b0002000000000000000001a0"
+	network = "fantom"
+	poolId = "0x9FFF4C8A5AEB13B63219F39383A2C2689702F7CC000000000000000000000779"
 	# On Ethereum and Ethereum testnets, you can pass creationHash=None
 	# On Polygon, you must pass the pool creation hash to generate verification params
 	creationHash = None;
