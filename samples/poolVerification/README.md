@@ -25,7 +25,7 @@ And finally re-generate the pool ABIs by running in a terminal from the root of 
 2.  Click on the tab **Internal Txns** and click on the transaction (or the one with **Contract Creation** in the **To** column if there are more transactions)
 3.  Click on the tab **Logs** and find the log named **PoolRegistered**
 4.  Doubleclick the value (which is the pool id) in **Topic 1** and copy it
-5.  Open the file `poolVerification.py` in your favorite editor, paste the copied value into the `poolId` variable (don't forget to add `0x` in front of it again and save the file.
+5.  Open the file `poolVerification.py` in your favorite editor, paste the copied value into the `poolId` variable (don't forget to add `0x` in front of it again and save the file)
 6.  Open a terminal and from the root of the repo run:
 
     `python3 ./samples/poolVerification/poolVerification.py`
