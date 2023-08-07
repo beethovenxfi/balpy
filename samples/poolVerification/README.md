@@ -10,6 +10,15 @@ Create a `.env` file in the root of the repo with the following contents:
     "privateKey": "<your_private_key"
     }
 
+Then initialize the git module with the following commands:
+
+    git submodule update --init
+    git submodule update --remote
+
+And finally re-generate the pool ABIs by running in a terminal from the root of the repo:
+
+    python3 generateMissingPoolArtifacts.py
+
 ## Run verification
 
 1.  Go to [ftmscan](https://ftmscan.com) and lookup the address of the pool you just created
